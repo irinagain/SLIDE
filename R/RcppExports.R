@@ -21,19 +21,3 @@ slide_givenS_C <- function(X, pvec, S, U, eps = 1e-06, k_max = 1000L) {
     .Call(`_SLIDE_slide_givenS_C`, X, pvec, S, U, eps, k_max)
 }
 
-rcpparma_hello_world <- function() {
-    .Call(`_SLIDE_rcpparma_hello_world`)
-}
-
-rcpparma_outerproduct <- function(x) {
-    .Call(`_SLIDE_rcpparma_outerproduct`, x)
-}
-
-rcpparma_innerproduct <- function(x) {
-    .Call(`_SLIDE_rcpparma_innerproduct`, x)
-}
-
-rcpparma_bothproducts <- function(x) {
-    .Call(`_SLIDE_rcpparma_bothproducts`, x)
-}
-
