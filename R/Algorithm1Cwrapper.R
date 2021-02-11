@@ -1,16 +1,3 @@
-#' Solve optimization algorithm for one value of lambda
-#'
-#' @param X 
-#' @param lambda 
-#' @param pvec 
-#' @param k_max 
-#' @param eps 
-#' @param Ustart 
-#'
-#' @return
-#' @export
-#'
-#' @examples
 solve_optim <- function(X, lambda, pvec, k_max = 1000, eps = 1e-06, Ustart = NULL) {
   n <- nrow(X)
   p <- ncol(X)

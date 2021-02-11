@@ -4,8 +4,16 @@
 \alias{solve_optim1_seq}
 \title{Solves penalized matrix factorization problem for the range of lambda values}
 \usage{
-solve_optim1_seq(X, pvec, lambda_seq = NULL, n_lambda = 50,
-  lambda_max = 1, lambda_min = 0.01, k_max = 1000, eps = 1e-06)
+solve_optim1_seq(
+  X,
+  pvec,
+  lambda_seq = NULL,
+  n_lambda = 50,
+  lambda_max = 1,
+  lambda_min = 0.01,
+  k_max = 1000,
+  eps = 1e-06
+)
 }
 \arguments{
 \item{X}{A n x p concatenated data matrix of views X_1,...,X_d.}

@@ -4,9 +4,18 @@
 \alias{create_structure_list}
 \title{Creates a list of candidate structures for the SLIDE model}
 \usage{
-create_structure_list(X, pvec, lambda_seq = NULL, n_lambda = 50,
-  lambda_min = 0.01, lambda_max = 1, ratio_max = 2/3,
-  standardized = F, eps = 1e-06, k_max = 1000)
+create_structure_list(
+  X,
+  pvec,
+  lambda_seq = NULL,
+  n_lambda = 50,
+  lambda_min = 0.01,
+  lambda_max = 1,
+  ratio_max = 2/3,
+  standardized = F,
+  eps = 1e-06,
+  k_max = 1000
+)
 }
 \arguments{
 \item{X}{A n x p concatenated data matrix of views X_1,...,X_d.}

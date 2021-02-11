@@ -4,8 +4,13 @@
 \alias{generateModel1}
 \title{Generate data from SLIDE model for two views.}
 \usage{
-generateModel1(n = 100, pvec = c(25, 25), cvec = c(1, 1), snr = 1,
-  orthogonalV = T)
+generateModel1(
+  n = 100,
+  pvec = c(25, 25),
+  cvec = c(1, 1),
+  snr = 1,
+  orthogonalV = T
+)
 }
 \arguments{
 \item{n}{An integer specifying the number of matched samples, the default value is 100.}

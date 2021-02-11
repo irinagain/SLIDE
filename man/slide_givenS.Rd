@@ -4,8 +4,15 @@
 \alias{slide_givenS}
 \title{Fits SLIDE model for X using the pre-specified structure S.}
 \usage{
-slide_givenS(X, pvec, S, Ustart = NULL, eps = 1e-06, k_max = 1000,
-  standardized = F)
+slide_givenS(
+  X,
+  pvec,
+  S,
+  Ustart = NULL,
+  eps = 1e-06,
+  k_max = 1000,
+  standardized = F
+)
 }
 \arguments{
 \item{X}{A n x p concatenated data matrix of views X_1,...,X_d.}

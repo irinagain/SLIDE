@@ -138,7 +138,7 @@ solve_optim1_seq <- function(X, pvec, lambda_seq = NULL,
             Ustart = param[[l + 1]]$U
         }
         # Solve group lasso problem
-        out <- solve_optim1(X, lambda = lambda_seq[l], pvec = pvec, k_max = k_max,
+        out <- solve_optim(X, lambda = lambda_seq[l], pvec = pvec, k_max = k_max,
             eps = eps, Ustart = Ustart)
         param[[l]] <- list(U = out$U, V = out$V, fmin = min(out$f))
     }

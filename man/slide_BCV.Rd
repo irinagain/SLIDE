@@ -4,8 +4,16 @@
 \alias{slide_BCV}
 \title{Selects binary structure for SLIDE model using bi-cross-validation}
 \usage{
-slide_BCV(X, pvec, structure_list, n_fold = 3, p_fold = 3,
-  k_max = 1000, eps = 1e-06, center = T)
+slide_BCV(
+  X,
+  pvec,
+  structure_list,
+  n_fold = 3,
+  p_fold = 3,
+  k_max = 1000,
+  eps = 1e-06,
+  center = T
+)
 }
 \arguments{
 \item{X}{A n x p concatenated data matrix of views X_1,...,X_d.}

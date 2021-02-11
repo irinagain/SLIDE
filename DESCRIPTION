@@ -1,19 +1,15 @@
 Package: SLIDE
 Type: Package
-Title: What the package does (short line)
+Title: Structural Learning and Integrative Decomposition of Multi-View Data
 Version: 1.0
 Date: 2020-04-16
-Author: Who wrote it
-Maintainer: Who to complain to
-     <yourfault@somewhere.net>
-Description: More about what it does (maybe more
-     than one line)
+Author: c(person("Irina","Gaynanova", email = "irinag@stat.tamu.edu", role = c("aut", "cre")), person("Dongbang","Yuan", email = "yuandb@stat.tamu.edu", role = "ctb"))
+Maintainer: Irina Gaynanova <irinag@stat.tamu.edu>
+Description: Learn partially-shared structures from multi-view data.
 License: GPL-3
 Imports: Rcpp (>= 1.0.3)
 LinkingTo: Rcpp, RcppArmadillo
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Suggests: knitr,rmarkdown
 VignetteBuilder: knitr
 Encoding: UTF-8
-
-
