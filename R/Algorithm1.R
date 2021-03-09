@@ -227,9 +227,9 @@ create_structure_from_solve <- function(out_solve, pvec, ratio_max = 2/3) {
 #'   \item{id_used}{A binary vector indicating the correspondence between \code{lambda_seq} and \code{Slist}. The zero values indicate the tuning parameters that either lead to the same structures, or resulted in structures with the rank larger than allowed by \code{ratio_max}.}
 #' @export
 #' @examples
-#' n = 50
-#' p1 = 20
-#' p2 = 40
+#' n = 30
+#' p1 = 10
+#' p2 = 20
 #' X1 = matrix(rnorm(n*p1), n, p1)
 #' X2 = matrix(rnorm(n*p2), n, p2)
 #' X = cbind(X1, X2)

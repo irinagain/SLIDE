@@ -51,9 +51,9 @@ Creates a list of candidate structures for the SLIDE model based on the solution
 The function solves the penalized matrix factorization problem for each value of from the sequence of tuning parameters lambda_1,..., lambda_m. The block-sparsity pattern of the resulting V(lambda_1), ..., V(lambda_m) is used to generate the sequence of binary structures S(lambda_1),..., S(lambda_m). This sequence is further trimmed to remove any repetitions, and to only keep structures with the number of nonzero columns being less than \code{ratio_max * min(n, sum(pvec))}.
 }
 \examples{
-n = 50
-p1 = 20
-p2 = 40
+n = 30
+p1 = 10
+p2 = 20
 X1 = matrix(rnorm(n*p1), n, p1)
 X2 = matrix(rnorm(n*p2), n, p2)
 X = cbind(X1, X2)

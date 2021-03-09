@@ -27,17 +27,17 @@
 #' @export
 #'
 #' @examples
-#' n = 100
+#' n = 25
 #'
 #' # Two matched datasets
-#' p1 = 25
-#' p2 = 25
+#' p1 = 10
+#' p2 = 10
 #' data = generateModel1(n = n, pvec = c(p1, p2))
 #' out_slide = slide(X = data$X, pvec = c(p1,p2))
 #' out_slide$S
 #'
 #' # Three matched datasets
-#' p3 = 40
+#' p3 = 15
 #' data = generateModel2(n = n, pvec = c(p1, p2, p3))
 #' out_slide = slide(X = data$X, pvec = c(p1, p2, p3))
 #' out_slide$S
