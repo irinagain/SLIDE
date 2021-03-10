@@ -12,16 +12,16 @@ To install from Github:
 devtools::install_github("irinagain/SLIDE")
 ```
 
-The main functions are `slide`(... To be filled ...) Each function has a documentation with a simple example which can be accessed using standard ? commands in R (i.e. `?slide`).
+The main function is `slide`, which fits SLIDE model to the multi-vew data. There are also several supporting functions. Each function has a documentation with a simple example which can be accessed using standard ? commands in R (i.e. `?slide`).
 
 Please feel free to contact me at irinag [at] stat [dot] tamu [dot] edu if you have any questions or experience problems with the package.
 
 Example
 -------
 ```{r}
-n = 100
-p1 = 25
-p2 = 25
+n = 25
+p1 = 10
+p2 = 10
 data = generateModel1(n = n, pvec = c(p1, p2))
 out_slide = slide(X = data$X, pvec = c(p1,p2))
 out_slide$S
