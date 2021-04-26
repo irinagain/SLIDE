@@ -3,7 +3,10 @@ Type: Package
 Title: Structural Learning and Integrative Decomposition of Multi-View Data
 Version: 1.0
 Date: 2021-03-12
-Author: c(person("Irina","Gaynanova", email = "irinag@stat.tamu.edu", role = c("aut", "cre")), person("Dongbang","Yuan", email = "yuandb@stat.tamu.edu", role = "ctb"))
+Authors@R: c(person("Irina","Gaynanova", email = "irinag@stat.tamu.edu", role = c("aut", "cre")), 
+              person("Dongbang","Yuan", email = "yuandb@stat.tamu.edu", role = "ctb"))
+Author: Irina Gaynanova [aut, cre],
+  Dongbang Yuan [ctb]
 Maintainer: Irina Gaynanova <irinag@stat.tamu.edu>
 Description: Implements SLIDE method for learning partially-shared structures from multi-view data described in I.Gaynanova and G.Li (2019), Structural learning and integrative decomposition of multi‐view data, Biometrics <doi:10.1111/biom.13108>.
 License: GPL-3
@@ -13,3 +16,5 @@ RoxygenNote: 7.1.1
 Suggests: knitr,rmarkdown
 VignetteBuilder: knitr
 Encoding: UTF-8
+
+  
