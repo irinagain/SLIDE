@@ -1,3 +1,4 @@
+
 #' Selects binary structure for SLIDE model using bi-cross-validation
 #'
 #'Selects binary structure for SLIDE model using bi-cross-validation based on the supplied set of candidate structures
@@ -51,6 +52,8 @@ slide_BCV <- function(X, pvec, structure_list, n_fold = 3, p_fold = 3, k_max = 1
     for (i in 1:d) {
         fold_id_p <- c(fold_id_p, sample(rep(seq_len(p_fold), length.out = pvec[i])))
     }
+    
+    # Since bcv submatrices have lower dimensions than original ones, need to ensure that the tried ranks (number of columns in structure_list) do not exceed the dimensions of subfolds
 
     # Save prediction error
     error <- matrix(0, n_fold * p_fold, n_structure)

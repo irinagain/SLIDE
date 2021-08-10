@@ -18,6 +18,7 @@
 #' @param center A logical indicator of whether the data should be centered, the default value is TRUE.
 #' @param k_max A maximal number of allowed iterations for SLIDE model fitting, the default value is 1000.
 #' @param eps A convergence tolerance criterion, the default value is 1e-6.
+#' @param ratio_max A maximal allowable rank of the binary structure as a ratio of maximal rank of X, the default value is set based on bi-cross-validation folds; with 3 folds corresponding to \code{ratio_max = 2/3} and 2 folds corresponding to \code{ratio_max = 1/2}.
 #'
 #' @return A list with the elements
 #'   \item{out_s}{Output from \code{standardizedX} applied to X.}
@@ -41,12 +42,17 @@
 #' data = generateModel2(n = n, pvec = c(p1, p2, p3))
 #' out_slide = slide(X = data$X, pvec = c(p1, p2, p3))
 #' out_slide$S
-slide <- function(X, pvec, n_lambda = 50, lambda_min = 0.01, n_fold = 3, p_fold = 3, center = T, k_max = 5000, eps = 1e-06) {
+slide <- function(X, pvec, n_lambda = 50, lambda_min = 0.01, n_fold = 3, p_fold = 3, center = T, k_max = 5000, eps = 1e-06, ratio_max = NULL) {
     # Center and scale the original dataset
     out_s <- standardizeX(X, pvec, center = center)
+    
+    # Make restriction on the maximal allowable rank as a ratio of n, p in each dataset
+    if (is.null(ratio_max)){
+        ratio_max = min((n_fold - 1)/n_fold, (p_fold - 1)/p_fold)
+    }
 
     # Form the list of candidate structures
-    out_struct <- create_structure_list(X = out_s$X, pvec = pvec, lambda_max = max(out_s$svec), standardized = T, lambda_min = lambda_min, n_lambda = n_lambda)
+    out_struct <- create_structure_list(X = out_s$X, pvec = pvec, lambda_max = max(out_s$svec), standardized = T, lambda_min = lambda_min, n_lambda = n_lambda, ratio_max = ratio_max)
 
     # Select the structure from the list using bcv procedure
     out_bcv <- slide_BCV(X = out_s$X, pvec = pvec, structure_list = out_struct$Slist, n_fold = n_fold,

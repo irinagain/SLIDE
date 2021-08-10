@@ -13,7 +13,8 @@ slide(
   p_fold = 3,
   center = T,
   k_max = 5000,
-  eps = 1e-06
+  eps = 1e-06,
+  ratio_max = NULL
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ slide(
 \item{k_max}{A maximal number of allowed iterations for SLIDE model fitting, the default value is 1000.}
 
 \item{eps}{A convergence tolerance criterion, the default value is 1e-6.}
+
+\item{ratio_max}{A maximal allowable rank of the binary structure as a ratio of maximal rank of X, the default value is set based on bi-cross-validation folds; with 3 folds corresponding to \code{ratio_max = 2/3} and 2 folds corresponding to \code{ratio_max = 1/2}.}
 }
 \value{
 A list with the elements
